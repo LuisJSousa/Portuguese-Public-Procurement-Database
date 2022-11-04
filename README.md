@@ -3,7 +3,8 @@
 Portuguese Public Procurement Database (PPPData) is a dataset, comprised of more than 5000 procurement contracts with 37 distinct properties. PPPData offers a rawdata file in json and a treated in xlsx.
 The authors of the database provide additional documentation in order to facilitate de comprehension and manipulation of the publish data.
 
-#Tabela explicativa propriedades dos contratos
+# Tabela explicativa propriedades dos contratos
+
 |Nome |	Descrição	|Esquema de Codificação	|Unidade de medição|
 | ------------- |:-------------:|:-------------:| -----:|
 |ID|Número de Identificação|	Inteiro|	N/A|
