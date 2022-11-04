@@ -1,0 +1,73 @@
+import json
+import pandas as pd 
+
+with open(r"dados_2015_2022.json") as f:
+    base_data = json.load(f)
+
+save_pdfs = []
+lista_de_preços_iniciais = []
+lista_de_preços_efetivos = []
+lista_de_ids = []
+lista_de_descrições = []
+lista_de_prazo_de_execução = []
+lista_de_prazos_de_submissão = []
+
+
+# loop thru contracts 
+for alinea in base_data:
+    informação = alinea["extra_details"]
+    Objecto_do_contrato = alinea["objectBriefDescription"] 
+    preço_contratual = alinea["initialContractualPrice"]
+    ID_do_contrato = alinea["id"]
+    lista_de_preços_iniciais.append(preço_contratual)
+    lista_de_ids.append(ID_do_contrato)
+    lista_de_descrições.append(Objecto_do_contrato)
+
+#get extra details
+    if informação == None:
+        preço_efectivo = "Anuncio sem detalhes extra"
+        lista_de_preços_efetivos.append(preço_efectivo)
+        lista_de_prazo_de_execução.append("N/A")
+
+    else:
+        preço_efectivo = informação["totalEffectivePrice"]
+        lista_de_preços_efetivos.append(preço_efectivo)
+        prazo_de_execução = informação["executionDeadline"]
+        lista_de_prazo_de_execução.append(prazo_de_execução)
+
+# get criterio de adj
+for alinea in base_data:
+    if "anuncio_details" in alinea:
+        detalhes = alinea["anuncio_details"]
+        prazo_de_submissão = detalhes["proposalDeadline"]
+        lista_de_prazos_de_submissão.append(prazo_de_submissão)
+    
+        if detalhes["type"] in ["Aviso de prorrogação de prazo", "Declaração de retificação de anúncio"]:
+            save_pdfs.append(detalhes["type"])
+        elif "pdf_anuncio" in detalhes:
+            anuncios = detalhes["pdf_anuncio"]
+            encontrado = False
+            for anuncio in anuncios:
+                dados_do_pdf = anuncio["data"]
+                for campos in dados_do_pdf:
+                    crit = campos["fieldDESC"]
+                    if crit in  ['CRITÉRIO DE ADJUDICAÇÃO', "Critério de adjudicação (*)", "Critério de adjudicação (*) "]:
+                        criterio = campos["fieldTEXT"]
+                        save_pdfs.append(criterio)
+                        encontrado = True
+            if not encontrado:
+                save_pdfs.append(detalhes["type"] + " sem Pdf")
+
+        else: 
+            save_pdfs.append("Link do anúncio com hiperligação errada \ falha a baixar pdf")
+            
+    else: 
+        save_pdfs.append("Contrato sem detalhes acerca do anúncio")
+        lista_de_prazos_de_submissão.append("N/A")
+# create excel table
+lista_de_critérios = pd.Series(save_pdfs)
+tabela = pd.DataFrame(columns=['ID', "Brief Discription", 'Initial Price','Effective Price', "Execution Deadline", "Submission Deadline" 'Critério de adjudicação'])
+tabela['ID'], tabela["Brief Discription"], tabela['Initial Price'], tabela['Effective Price'], tabela["Execution Deadline"], tabela["Submission Deadline"], tabela['Critério de adjudicação'] = lista_de_ids, lista_de_descrições, lista_de_preços_iniciais, lista_de_preços_efetivos, lista_de_prazo_de_execução, lista_de_prazos_de_submissão, lista_de_critérios, Label_ID
+tabela_excel = "tabela_2015_2022.xlsx"
+tabela.to_excel(tabela_excel)
+print(tabela.head())
