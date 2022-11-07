@@ -70,7 +70,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-All research papers published using this dataset must cite the work of the authors of this project. The correct way to cite this work is provided in the "Citation" section below.
+All research papers published using PPPData must cite the work of the authors of this project. The correct way to cite this work is provided in the "Citation" section below.
 
 ## Citation
 
