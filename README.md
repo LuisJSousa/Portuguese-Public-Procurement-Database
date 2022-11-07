@@ -86,13 +86,13 @@ Ao longo do artigo são identificadas oportunidades futuras de desenvolvimento q
 authors:
   - family-names: Jacques de Sousa
     given-names: Luís
-    orcid: "[https://orcid.org/0000-0003-4925-7248](https://orcid.org/my-orcid?orcid=0000-0002-0789-9368)"
+    orcid: "https://orcid.org/my-orcid?orcid=0000-0002-0789-9368"
     - family-names: Poças Martins
     given-names: João
-    orcid: "[[https://orcid.org/0000-0003-4925-7248](https://orcid.org/my-orcid?orcid=0000-0002-0789-9368)](https://orcid.org/0000-0001-9878-3792)"
+    orcid: "https://orcid.org/0000-0001-9878-3792"
     - family-names: Sanhudo
     given-names: Luís
-    orcid: "[[https://orcid.org/0000-0003-4925-7248](https://orcid.org/my-orcid?orcid=0000-0002-0789-9368)](https://orcid.org/0000-0002-2578-6981)"
+    orcid: "https://orcid.org/0000-0002-2578-6981"
 version: 0.11.2
 date-released: "2022-12-7"
 identifiers:
