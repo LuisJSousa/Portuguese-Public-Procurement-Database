@@ -50,7 +50,7 @@ The authors of the database provide additional documentation in order to facilit
 
 MIT License
 
-Copyright (c) 2022 Luís J. Sousa, João Poças Martins and Luís Sanhudo
+Copyright (c) 2022 Luís Jacques de Sousa, João Poças Martins and Luís Sanhudo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
