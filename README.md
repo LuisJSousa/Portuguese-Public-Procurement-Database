@@ -74,7 +74,7 @@ All research papers published using PPPData must cite the work of the authors of
 
 ## Citation
 
-If you PPPData, please cite it using these metadata
+If you use PPPData, please cite it using these metadata
 
 ```
 cff-version: 1.2.0
