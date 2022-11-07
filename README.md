@@ -70,5 +70,33 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-All research papers published using this dataset must cite the work of the authors of this project. The correct way to cite this work is provided in the "Citation" section.
+All research papers published using this dataset must cite the work of the authors of this project. The correct way to cite this work is provided in the "Citation" section below.
 
+## Citation
+
+```
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: Base de dados: Contratação Pública em Portugal entre 2015 e 2022
+abstract: Atualmente, o setor da Arquitetura, Engenharia e Construção (AEC) exibe uma enorme escassez de informação sistematizada, sobre a forma de bases de dados (BD). Esta carência apresenta-se como um crescente obstáculo à implementação de novas metodologias no setor, que apresentam já um elevado sucesso noutras indústrias. Esta escassez contrasta ainda com o funcionamento intrínseco do setor AEC, que ao longo de todo o processo construtivo gera um elevado volume de documentação. Nomeadamente, o procedimento de contratação e concurso público é dos procedimentos mais bem documentados ao longo deste processo, dispondo de um acesso aberto a todos os dados a ele associados, ainda que careçam de tratamento e sistematização.
+
+Com o objetivo de contribuir para a sistematização da informação do setor, o presente trabalho resume os passos desenvolvidos para a obtenção e tratamento destes dados, através de um algoritmo scraping, disponibilizando a BD obtida. A BD resultante é composta por 5214 contratos únicos, caracterizados com 37 propriedades distintas.
+
+Ao longo do artigo são identificadas oportunidades futuras de desenvolvimento que podem ser suportadas por esta BD, aplicando técnicas de análise estatística descritiva e algoritmos de inteligência artificial, nomeadamente, machine learning (ML). Refere-se ainda a possibilidade de continuar o processo de expansão da BD e de a traduzir para língua inglesa de modo a ampliar o âmbito das análises a realizar.
+authors:
+  - family-names: Jacques de Sousa
+    given-names: Luís
+    orcid: "[https://orcid.org/0000-0003-4925-7248](https://orcid.org/my-orcid?orcid=0000-0002-0789-9368)"
+    - family-names: Poças Martins
+    given-names: João
+    orcid: "[[https://orcid.org/0000-0003-4925-7248](https://orcid.org/my-orcid?orcid=0000-0002-0789-9368)](https://orcid.org/0000-0001-9878-3792)"
+    - family-names: Sanhudo
+    given-names: Luís
+    orcid: "[[https://orcid.org/0000-0003-4925-7248](https://orcid.org/my-orcid?orcid=0000-0002-0789-9368)](https://orcid.org/0000-0002-2578-6981)"
+version: 0.11.2
+date-released: "2022-12-7"
+identifiers:
+
+license: MIT License
+repository-code: "[https://github.com/citation-file-format/my-research-software](https://github.com/LuisJSousa/Portuguese-Public-Procurement-Database)"
+```
