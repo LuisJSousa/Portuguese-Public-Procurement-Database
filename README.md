@@ -46,7 +46,7 @@ The authors of the database provide additional documentation in order to facilit
 |Justificação para mudança de preço|	Justificação para mudança de preço (formato livre)	|Texto|	N/A|
 
 
-##License
+## License
 
 MIT License
 
