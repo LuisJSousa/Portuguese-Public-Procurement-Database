@@ -51,7 +51,7 @@ The authors of the database provide additional documentation in order to facilit
 | ------------- |:-------------:|:-------------:| -----:|
 |ID|Identification Number|	Integer|	N/A|
 |Short Description| Short description of the object of the contract| Text|	N/A|
-|Cpvs| Cpvs| Code Name| Text| N/A|
+|Cpvs| Cpvs Code| Text| N/A|
 |Cpvs denomination| Cpvs code designation| Text| N/A|
 |Environmental Criterion| Whether the environmental criterion was considered in the tender (TRUE-FALSE)| Logical| N/A|
 |Publication year| Year of publication of tender in the Diário da República| Date| N/A|
